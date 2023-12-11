@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>
+        Table
+    </title>
+    <style>
+        body
+        {
+            background-color:aquamarine ;
+            font-family: 'Segoe UI', Tahoma,Verdana, sans-serif;
+
+        }
+
+        form
+        {
+            margin-top: 2em;
+            display: flex;
+            justify-content:flex-start;
+            align-items: center;
+            flex-direction: column;
+            background-color: 	#33cccc;
+            width: 80%;
+            border-radius: 8px ;
+            padding: 1em;
+        }
+
+        input,span
+        {
+            width: 60%;
+        }
+
+        .btns
+        {
+            width: 30%;
+        }
+
+        input[type="submit"],button
+        {
+            width: 40%;
+            display: inline-block;            
+        }
+
+        p
+        {
+            display: inline;
+            text-align: left;
+        }
+        .container
+        {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-direction: column;
+            height: 60vh;
+            width: 100%;
+
+            
+        }
+
+        table
+        {
+            margin-top: 6em;
+        }
+
+        span{
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <p>Name</p><input type="text" name="name">
+            <span></span>
+            <p>Age</p><input type="text" name="age">
+            <span></span>
+            <p>E-mail</p><input type="text" name="email">
+            <span></span>
+            <div class="btns">
+                <input type="submit" >
+                <button>Rest</button>
+            </div>
+        </form>
+
+        <table>
+            <tr>
+                <th>
+                    Name
+                </th>
+                <th>
+                    Age
+                </th>
+                <th>
+                    E-mail
+                </th>
+            </tr>
+
+        <tbody id="test">
+
+        </tbody>
+    </table>
+    </div>
+
+    <script src="./TableAdding.js"></script>
+</body>
+</html>

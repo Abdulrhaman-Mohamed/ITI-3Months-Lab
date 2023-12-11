@@ -1,0 +1,463 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    
+}
+body
+{
+    font-family: 'Raleway', sans-serif;
+    color: white;
+}
+a
+{
+    text-decoration: none;
+    color: white;
+
+}
+ul
+{
+    list-style: none;
+}
+
+.landing_page
+{
+    background-image: url("./Images/bg.jpg.webp");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.header_container
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+}
+.header_container .left_side
+{
+    width: 30%;
+}
+.header_container .right_side
+{
+    width: 70%;
+
+}
+.header_container .left_side
+{
+    margin-left: 200px;
+}
+
+
+
+.header_container .right_side ul li
+{
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 1.2em;
+    cursor: pointer;
+
+}
+.right_side ul li  a:hover
+{
+    color: red;
+}
+
+.header_container .right_side #Login
+{
+    display: inline-block;
+    background-color: #d82a4e;
+    padding: 18px 57px;
+}
+
+.landing_page .content 
+{
+    height: 40vh;
+    text-align: center;
+    padding-top: 220px;
+    margin-bottom: 105px;
+}
+
+.landing_page .content h1
+{
+    font-weight: 500;
+    font-size: 4em;
+}
+.landing_page .content p
+{
+    margin-top: 8px;
+    padding: 0 20em;
+    line-height: 2em;
+    font-size: 14.1px;
+    font-weight: 500;
+}
+
+.landing_page .content .singup_area
+{
+    margin-top: 4em;
+}
+ .singup_area input
+{
+    padding: 1.2em 4em;
+    color: black;
+    margin-right: 5px;
+    outline: none;
+}
+.singup_area button
+{
+    padding: 1.2em 3.7em;
+    background-color: #d82a4e;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1em;
+
+}
+ .section_search
+{    
+    height: 60vh;
+    padding: 1.5em;
+}
+
+section .search_course
+{
+
+    background-color: #d82a4e;
+    width: 82%;
+    height: 70%;
+    text-align: center;
+    margin-left: 7em;
+    margin-top: 3em;
+    padding-top: 4em;
+}
+
+section .search_course h2
+{
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.bg_search
+{
+    background-color: white;
+    height: 50%;
+    width: 80%;
+    align-self: center;
+    margin-left: 124px;
+}
+.bg_search form
+{
+    padding: 60px;
+}
+
+.bg_search form input
+{
+    background-color: #edf4f6;
+    border: none;
+    outline: none;
+}
+.bg_search form input:focus
+{
+    border: none;
+    border-bottom:2px solid #d82a4e;
+    outline: none;
+}
+
+.card_section 
+{
+    display: flex;
+    justify-content: center;
+    color: black;
+    width: 100%;
+}
+
+.card_section .container
+{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+}
+.card_section .container .title
+{
+    text-align: center;
+    padding: 0 9em;
+
+}
+
+.card_section .container .title h2
+{
+    font-size: 48px;
+    color: #474747;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+.card_section .container .title p
+{
+    font-size: 1.3em;
+    color: #878787;
+    line-height: 1.5em;
+    margin-bottom: 0;
+    font-weight: 500;
+
+
+}
+
+.card_section .container a
+{
+    color: black;
+}
+li
+{
+    list-style: none;
+    display: inline-block;
+}
+.card_section .container .navbar
+{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    padding-top: 50px;
+    margin-bottom: 60px;
+}
+.card_section .container .navbar li
+{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: 600;
+    color: #474747;
+    padding: 12px 10px 5px;
+    margin: 0 10px;
+    border-bottom: 4px solid transparent;
+    cursor: pointer;
+}
+
+.cards
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-bottom: 60px;
+}
+.card_item
+{
+    width: 350px;
+    background-color: #edf4f6;
+    margin-bottom: 30px;
+}
+.upper_card
+{
+    background-image: url(./Images/1.jpg.webp);
+    background-size: cover;
+    width: 100%;
+    height: 300px;
+    
+}
+.price
+{
+    font-size: 14px;
+    color: #fff;
+    font-weight: 600;
+    background: #d82a4e;
+    display: inline-block;
+    padding: 13px 19px;
+    margin: 14px;
+}
+.middel_card
+{
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.middel_card h4
+{
+    font-size: 1.7em;
+    font-weight: 600;
+    color: #474747;
+}
+.middel_card p
+{
+    margin: 10px 0;
+    font-size: 1em;
+    color: #878787;
+}
+
+.middel_card span
+{
+    color: #d82a4e;
+    font-size: 1.4em;
+    font-weight: bold;
+}
+hr
+{
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
+}
+.end_card
+{
+    
+    font-size: 1em;
+    color: #878787;
+    padding: 10px 15px;
+    height: 60px;
+    margin-bottom: 15px;
+
+}
+.end_card img
+{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    margin-right: 10px;
+    float: left;
+}
+.end_card p
+{
+    margin-left: 23px;
+    line-height: 1.5;
+    padding-left: 60px;
+    margin-bottom: 0;
+    padding-top: 12px;
+    font-weight: 600;
+    width: 250px;
+
+}
+.end_card span
+{
+    display: block;
+    color: #d82a4e;
+}
+
+.become_teacher
+{
+    position: absolute;
+    height: 120vh;
+    width: 100%;
+    color: white;
+    background-image: url(./Images/signup-bg.jpg.webp);
+    background-size:contain;
+    background-position: 487px 0px;
+    background-repeat: no-repeat;
+    overflow: hidden;
+
+}
+
+.become_teacher .container
+{
+    position: absolute;
+    height: 100%;
+    background-color: #d82a4e;
+    width: 50%;
+
+}
+.become_teacher .content .title
+{
+    margin: 4em;
+    width: 80%;
+
+}
+.become_teacher .content .title h2
+{
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+.become_teacher .content .title p
+{
+    font-weight: 500;
+    font-size: 18.1px;
+    line-height: 2.2;
+}
+.become_teacher .form_become_teacher
+{
+    width: 80%;
+    background-color: white;
+    height: 60vh;
+    margin: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    align-self: start;
+    flex-direction: column;
+}
+.become_teacher .form_become_teacher input[type="text"]
+,.become_teacher .form_become_teacher input[type="email"]
+,.become_teacher .form_become_teacher input[type="number"]
+{
+    height: 57px;
+    width: 70%;
+    padding: 0 30px;
+    margin: -12px 27px;
+    float: left;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    background: #edf4f6;
+    display: block;
+    outline: none;
+}
+
+.become_teacher .form_become_teacher input:focus
+{
+    border: none;
+    border-bottom:2px solid #d82a4e;
+    outline: none;
+}
+.become_teacher .form_become_teacher .Upload::-webkit-file-upload-button
+{
+    visibility: hidden;
+}
+.become_teacher .form_become_teacher .Upload::before
+{
+    display: block;
+    background: #3e3e3e;
+    color: #fff;
+    max-width: 175px;
+    padding: 13px 5px;
+    font-size: 14px;
+    font-weight: 500;
+    clear: both;
+    text-align: center;
+    overflow: hidden;
+    content: 'Upload Courses';
+}
+
+.become_teacher .form_become_teacher input[type="submit"]
+,.become_teacher .form_become_teacher input[type="file"]
+{
+    width: 80%;
+    border: none;
+}
+
+.become_teacher .form_become_teacher input[type="submit"]
+{
+    display: block;
+    background: #d82a4e;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 500;
+    padding: 21px 0px;
+    width: 220px;
+    clear: both;
+    margin-left: -255px;
+    margin-top: -54px;
+}
+
+
+
+
+
+
+
+

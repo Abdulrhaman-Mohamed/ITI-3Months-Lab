@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .hidden
+        {
+            display: none;
+        }
+        span
+        {
+            font-size: 1em;
+            color: red;
+        }
+
+        .swap
+        {
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="">
+            Number of books <input id="bookNum" type="text"  >
+
+            <button>Ok</button>
+         </div>
+
+         <div class="hidden">
+
+                Book Name <input type="text" >
+                <span></span>
+                Price <input type="text" >
+                <span></span>
+                Author Name <input type="text" >
+                <span></span>
+                Author Email <input type="text" >
+                <span></span>
+                <button  >Submit</button>
+
+         </div>
+
+         <div class="hidden">
+            <table border="2">
+                <thead>
+                    <tr>
+                        <th>
+                            Book 
+                        </th>
+                        <th>
+                            Price 
+                        </th>
+                        <th> 
+                            Author 
+                        </th>
+                        <th>
+                            Email 
+                        </th>
+                    </tr>
+                </thead>
+                <tbody id="tbody">
+                </tbody>
+            </table>
+         </div>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
