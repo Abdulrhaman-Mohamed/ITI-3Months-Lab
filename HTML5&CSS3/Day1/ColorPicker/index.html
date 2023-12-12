@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form
+        {
+            margin: 50px 0 50px 500px;
+        }
+        input
+        {
+            margin: 0 8px;
+        }
+        h1,h3
+        {
+            text-align: center;
+        }
+        td
+        {
+            height: 10px;
+            width: 10px;
+            border: 1px solid red;
+        }
+        main
+        {
+            display: flex;
+            justify-content: center;
+        }
+        #color
+        {
+            margin-left: 710px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Color Picker</h1>
+    </header>
+    <form id="Grid">
+        <label for="Row">Row:</label><input type="text" name="Row" pattern="[1-9]">
+        <label for="Column">Column:</label><input type="text" name="Column" pattern="[1-9]" >
+
+        <button id="submit">Submit </button>
+    </form>
+    <h1>Pick Color</h1>
+    <input type="color" name="" id="color">
+    <h3>Grid</h3>
+    <main>
+        <table>
+            <tbody id="Tbody">
+            </tbody>
+        </table>
+    </main>
+ <script src="./script.js"></script>
+</body>
+</html>

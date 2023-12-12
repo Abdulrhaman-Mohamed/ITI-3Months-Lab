@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p
+    {
+        display: inline-block;
+        margin-right: 10px;
+        font-size: 2em;
+    }
+    progress
+    {
+        appearance: none;
+        width: 400px;
+    }
+    progress::-webkit-progress-bar {
+        background: linear-gradient(to right, #ffffff 0%, #ff9900 100%);;
+    }
+</style>
+<body>
+    <p>Progess</p><progress value="" max="100"></progress>
+    <p id="value"></p>
+    <script>
+        //debugger
+        var pro = document.getElementsByTagName("progress")[0];
+        var value = document.getElementById("value");
+        var count = 0;
+        function progesschange()
+        {
+            if(count<101)
+            {
+                count++;
+                pro.value = count;
+            }
+            else
+            pro.value=0;
+
+            value.innerText=count + "%";
+            setTimeout("progesschange()",500);
+        }
+
+        progesschange();
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #rang
+        {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <input type="number" pattern="[1-100]">
+    <input type="range" name="" id="rang" value="0" min="0" max="100">
+    <p></p>
+    <script>
+        var inputs = document.getElementsByTagName("input");
+        
+        var p = document.getElementsByTagName("p")[0];
+        
+        
+        inputs[1].addEventListener("input",function(){
+            p.innerText = inputs[1].value;
+        })
+
+        inputs[0].addEventListener("input",function(){
+            p.innerText = inputs[0].value;
+        })
+    </script>
+</body>
+</html>
