@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        text-align: center;
+      }
+      table {
+        display:flex ;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+      table td {
+        width: 20px;
+        height: 20px;
+        border: 1px solid black;
+      }
+      tr {
+        border: 1px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>PIXEL ART MAKER</h1>
+    <div>
+      <label for="">Grid Height</label>
+      <input type="number" name="" id="" />
+      <label for="">Grid Width</label>
+      <input type="number" name="" id="" />
+      <input type="submit" onclick="create()" />
+    </div>
+    <h3>Choose Grid size</h3>
+    <input type="color" id="clor" />
+    <br />
+    <h3>Desgin Canvas</h3>
+    <table></table>
+    <script>
+      var hei = document.getElementsByTagName("input")[0];
+      var wid = document.getElementsByTagName("input")[1];
+      var tab = document.getElementsByTagName("table")[0];
+
+      function create() {
+        tab.innerHTML = ""; //>> بمسك كل اللي ف الجدول اصفرة مع كل مرة بتتنفذ فيها الفانكشن
+        for (var i = 0; i < hei.value; i++) {
+          var tr = document.createElement("tr");
+          for (var x = 0; x < wid.value; x++) {
+            var td = document.createElement("td");
+           (function()
+           {
+            var gg=x;
+            td.addEventListener("click", function () {
+                //debugger
+                var clr = document.getElementById("clor").value;
+                this.style.backgroundColor = clr;
+                this.innerText=gg;
+              });
+           })();
+
+
+            tr.appendChild(td);
+          }
+          tab.appendChild(tr);
+        }
+      }
+    </script>
+  </body>
+</html>

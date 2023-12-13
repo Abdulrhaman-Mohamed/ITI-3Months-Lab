@@ -3,7 +3,7 @@ var inputs = document.getElementsByTagName("input");
 var tbody = document.getElementById("Tbody");
 var submit = document.getElementById("submit");
 var color = document.getElementById("color");
-var colorValue ="black";
+//var colorValue ="black";
 //console.log(submit)
 //console.log(form)
 
@@ -26,13 +26,14 @@ submit.addEventListener("click",function(e){
     e.preventDefault();
     
 })
-color.addEventListener("change",function(){
-    colorValue = color.value;
-    console.log(colorValue)
-})
+
+// color.addEventListener("change",function(){
+//     colorValue = color.value;
+//     //console.log(colorValue)
+// })
 
 function changeColor(e)
 {
-    e.style.backgroundColor=colorValue;
+    e.style.backgroundColor=color.value;
     //console.log(e);
 }
