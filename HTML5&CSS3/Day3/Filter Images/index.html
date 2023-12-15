@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filtering</title>
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+        img
+        {
+            margin-top: 20px;
+            width: 600px;
+            height: 70vh;
+            border-radius: 150px 50px;
+
+        }
+
+        div
+        {
+            margin-top: 60px;
+            display: flex;
+            justify-content: space-evenly;
+            width: 100%;
+        }
+
+        button:hover
+        {
+            background-color: rgb(77, 124, 226);
+        }
+    </style>
+</head>
+<body>
+
+        <img id="img" src="./images/thankful-businessman-with-open-arms-field_254268-363.jpg" alt="">
+
+        <div>
+            <button>
+                saturate
+            </button>
+            <button>
+                opacity
+            </button>
+            <button>
+                invert
+            </button>
+            <button>
+                sepia
+            </button>   
+            <button>
+                grayscale 
+            </button>
+        </div>
+
+<script>
+    var btns = document.getElementsByTagName("button");
+    var img = document.getElementById("img");
+    console.log(btns[0].innerText   );
+    for(var i = 0 ; i <5;i++)
+    {
+        (function(){
+            let x = i;
+            var de
+            if(i<2)
+             de = "0.5";
+            else
+            de = "100%";
+
+            btns[i].addEventListener("click",function(){
+                img.style.filter=`${btns[x].innerText}(${de})`;
+            })
+        })();
+
+    }
+</script>
+</body>
+</html>

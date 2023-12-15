@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FootBall</title>
+
+    <style>
+        body
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        div
+        {
+            width: 100%;
+            margin-top: 40vh;
+            margin-left: 60px;
+
+        }
+        #players
+        {
+            width: 200px;
+            display: inline-block;
+        }
+        img
+        {
+            position: relative;
+        }
+        img:first-child
+        {
+            left: 270px;
+            bottom: 50px;
+        }
+        img:nth-last-child(2)
+        {
+            right: 270px;
+            bottom: 50px;
+        }
+        img:nth-last-child(3)
+        {
+            z-index: -1;
+        }
+        #ball
+        {
+            width: 40px;
+            bottom: 120px;
+            left: 400px;
+            animation-name: Myanimation;
+            animation-duration: 2.5s;
+            animation-iteration-count: infinite;
+            animation-direction: alternate-reverse;
+            
+
+        }
+        @keyframes Myanimation {
+            0%
+            {
+                left: 400px;
+                transform: rotate(720deg);
+   
+            }
+            100%
+            {
+                left: 1500px;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div>
+        
+        <img id="players" src="./images/player1.png" alt="">
+        
+        <img src="./images/grass.png" alt="">
+        
+        <img id="players" src="./images/player2.png" alt="">
+        <img id="ball" src="./images/Black-Red_Egyptian_Soccer_ball.png" alt="">
+
+    </div>
+
+</body>
+</html>
