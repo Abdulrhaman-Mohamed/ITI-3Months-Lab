@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: column;
+      }
+      #street {
+        width: 100%;
+        height: 200px;
+        background-color: rgb(49, 49, 49);
+      }
+      div {
+        position: relative;
+      }
+      #bic {
+        top: 40px;
+        position: absolute;
+        width: 150px;
+        animation-name: Bic;
+        animation-duration: 7s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+      }
+      @keyframes Bic {
+        0% {
+          left: 0;
+        }
+        100% {
+          left: 90%;
+        }
+      }
+
+      .tran {
+        transform: translateX(-100px);
+        transition: all 1s;
+      }
+      .tran:hover {
+        transform: translateX(0px);
+      }
+      .btn {
+        margin: 8em 4em;
+        background-color: aquamarine;
+        border-radius: 30px;
+        padding: 2em;
+        transition: all 4s;
+      }
+      .btn:hover {
+        transform: translateY(-100px);
+      }
+      .finalSec {
+        width: 400px;
+        overflow: hidden;
+      }
+      .scal {
+        width: 100%;
+        height: 100%;
+
+        transition: all 1.6s;
+      }
+      .scal:hover {
+        filter: brightness(80%);
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <img
+        id="bic"
+        src="./images/—Pngtree—cartoon characters ride bicycles_4141664.png"
+        alt=""
+      />
+      <svg id="street">
+        <line
+          x1="0"
+          y1="0"
+          x2="100%"
+          y2="0"
+          stroke="#a6a6a6"
+          stroke-width="30"
+          stroke-linecap="butt"
+        />
+        <line
+          x1="0"
+          y1="100"
+          x2="100%"
+          y2="100"
+          stroke="#a6a6a6"
+          stroke-width="10"
+          stroke-linecap="round"
+          stroke-dasharray="5 10"
+        />
+        <line
+          x1="0"
+          y1="200"
+          x2="100%"
+          y2="200"
+          stroke="#a6a6a6"
+          stroke-width="30"
+          stroke-linecap="butt"
+        />
+      </svg>
+    </div>
+
+    <section class="tran">
+      <img src="./images/home-02-custom-banner-02-1.jpg" alt="" />
+    </section>
+
+    <section>
+      <button class="btn">Click</button>
+    </section>
+
+    <section class="finalSec">
+      <img class="scal" src="./images/home-top-banner-3.jpg" alt="" />
+    </section>
+  </body>
+</html>
