@@ -11,6 +11,7 @@
             justify-content: center;
             align-items: center;
             flex-direction: column;
+            background-color: rgb(46, 52, 65);
         }
         img
         {
@@ -21,12 +22,28 @@
 
         }
 
-        div
+        .div2
         {
             margin-top: 60px;
             display: flex;
             justify-content: space-evenly;
             width: 100%;
+        }
+
+        .div1
+        {
+            margin-top: 20px;
+            width: 600px;
+            height: 60vh;
+            background-image: url("./images/thankful-businessman-with-open-arms-field_254268-363.jpg"),
+            url("./images/bird.jpg"),
+            url("./images/sun.jpg");
+            background-repeat: no-repeat;
+            background-size: 800px;
+            background-position: -140px -90px;
+            border-radius: 150px 50px;
+
+
         }
 
         button:hover
@@ -36,44 +53,41 @@
     </style>
 </head>
 <body>
-
-        <img id="img" src="./images/thankful-businessman-with-open-arms-field_254268-363.jpg" alt="">
-
-        <div>
+    <div class="div1">
+    </div>
+     <!-- <img id="img" src="./images/thankful-businessman-with-open-arms-field_254268-363.jpg" alt=""> -->
+        <div class="div2">
             <button>
-                saturate
+                saturation
             </button>
             <button>
-                opacity
+                difference
             </button>
             <button>
-                invert
+                exclusion
             </button>
             <button>
-                sepia
+                multiply
+            </button>
+            <button>
+                lighten
             </button>   
             <button>
-                grayscale 
+                overlay 
             </button>
         </div>
 
 <script>
     var btns = document.getElementsByTagName("button");
-    var img = document.getElementById("img");
-    console.log(btns[0].innerText   );
-    for(var i = 0 ; i <5;i++)
+    var img = document.getElementsByClassName("div1")[0];
+    console.log(btns[0].innerText);
+    for(var i = 0 ; i <6;i++)
     {
         (function(){
-            let x = i;
-            var de
-            if(i<2)
-             de = "0.5";
-            else
-            de = "100%";
-
-            btns[i].addEventListener("click",function(){
-                img.style.filter=`${btns[x].innerText}(${de})`;
-            })
+            var x = i;
+                btns[i].addEventListener("click",function(){
+                    img.style.backgroundBlendMode=`${btns[x].innerText}`;
+                })
         })();
 
     }

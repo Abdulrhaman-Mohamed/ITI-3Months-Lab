@@ -67,9 +67,30 @@
         filter: brightness(80%);
         transform: scale(1.2);
       }
+      .DonHover
+      {
+        background-color: blueviolet;
+        color: azure;
+        padding: 1.6em;
+        width: 100px;
+        border: none;
+        margin: 6em auto;
+        transition: all 3s;
+        transform-origin: 0px;
+
+      }
+      .DonHover:hover
+      {
+        transform:rotate(270deg);
+      }
+
     </style>
   </head>
   <body>
+
+    <button class="DonHover">
+      Don't Hover Me
+    </button>
     <div>
       <img
         id="bic"
