@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task3</title>
+    <style>
+        div
+        {
+            height: 200px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            
+        }
+        .container
+        {
+           
+            display: grid;
+            grid-auto-rows: 200px;
+            grid-template:
+            "a a a b" 
+            "a a a c"
+            "d d d d"
+            "e f f f"
+            "e g h i"   ;
+            gap: 10px;
+
+            
+        }
+        .a
+        {
+            background-image: url("./images/size-image-1.jpeg");
+            grid-area: a;
+            height: 100%;
+            background-size: 100% 100%;
+        }
+        .b
+        {
+            background-image: url("images/size-image-2.jpeg");
+            grid-area: b;
+        }
+        .c
+        {
+            background-image: url("images/size-image-3.jpeg");
+            grid-area: c;
+        }
+        .d
+        {
+            background-image: url("images/size-image-4.jpeg");
+            grid-area: d;
+            background-size:100% 200px ;
+        }
+        .e
+        {
+            background-image: url("images/size-image-1.jpeg");
+            grid-area: e;
+            height: 100%;
+                background-size: 100% 100%;
+
+        }
+        .f
+        {
+            background-image: url("images/size-image-2.jpeg");
+            grid-area: f;
+            background-size:100% 200px ;
+        }
+        .g
+        {
+            background-image: url("images/size-image-3.jpeg");
+            grid-area: g;
+            
+        }
+        .h
+        {
+            background-image: url("images/size-image-4.jpeg");
+            grid-area: h;
+        }
+        .i
+        {
+            background-image: url("images/image-1.jpeg");
+            grid-area: i;
+        }
+
+
+        @media (max-width:750px)
+        {
+            .container
+            {
+               
+                display: grid;
+
+                grid-template:
+                "a" 
+                "b"
+                "c"
+                "d"
+                "e"
+                "f"
+                "g"
+                "h"
+                "i"  ;
+                gap: 10px;
+
+                
+            }
+
+            .e,.a
+            {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="a"></div>
+        <div class="b"></div>
+        <div class="c"></div>
+        <div class="d"></div>
+        <div class="e"></div>
+        <div class="f"></div>
+        <div class="g"></div>
+        <div class="h"></div>
+        <div class="i"></div>
+    </div>
+</body>
+</html>

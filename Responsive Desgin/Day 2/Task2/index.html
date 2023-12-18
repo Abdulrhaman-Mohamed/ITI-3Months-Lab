@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 2</title>
+    <style>
+
+        .contaier
+        {
+            height: 90vh;
+            display: grid;
+            grid-template: 5 /4  ;
+            text-align: center;
+            gap: 5px;
+        }
+        div
+        {
+            border-radius: 8px;
+        }
+        .div
+        {
+            background-color: red;
+        }
+        .nav
+        {
+            grid-area: 1 / 1 / auto / span 4;
+            background-color: aquamarine;
+        }
+        .sidebar
+        {
+            grid-area: 2 / 1 / span 4 /  1 span ;
+            background-color: bisque;
+        }
+        .main
+        {
+            grid-area: 2 / 2 / span 2 /  3 span ;
+            background-color: blue;
+        }
+
+        .footer
+        {
+            grid-area: 5 / 2 /span 1 / 3 span ;
+            background-color: blueviolet;
+        }
+
+        @media (max-width : 750px)
+        {
+            .contaier
+            {
+
+                grid-template: 9 /1 ;
+                grid-auto-rows: 5% 20% 10% 10% 10% 10% 10% 10% 5%  ;
+
+            }
+            .nav
+        {
+            grid-area: 1 / 1  ; 
+            background-color: aquamarine;
+        }
+        .sidebar
+        {
+            grid-area: 2 / 1    ;
+            background-color: bisque;
+        }
+        .main
+        {
+            grid-area: 3 / 1 / span 3  ;
+            background-color: blue;
+        }
+
+        .footer
+        {
+            grid-area: 9 / 1  ;
+            background-color: blueviolet;
+        }
+        }
+
+
+         
+    </style>
+</head>
+<body>
+    <div class="contaier">
+        <div class="nav">navbar</div>
+        <div class="sidebar">sidebar</div>
+        <div class="main">main</div>
+        <div class="div">Content1</div>
+        <div class="div">Content1</div>
+        <div class="div">Content1</div>
+        <div class="footer">footer</div>
+    </div>
+
+</body>
+</html>

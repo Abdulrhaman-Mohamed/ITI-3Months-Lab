@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 1</title>
+    <style>
+        .container 
+        {
+            display: grid;
+            grid-template: 3 / 4 ;
+            gap: 5px 10px; 
+        }
+        div
+        {
+            border-radius: 8px;
+            text-align: center;
+        }
+        .div1
+        {
+            height: 50px;
+            background-color: black;
+            color: white;
+            grid-area: 1 / 1 / auto  / span 4  ;
+
+        }
+        .divdef
+        {
+            background-color: aqua;
+            height: 400px;
+        }
+        .div6
+        {
+
+            background-color: brown;
+            color: white;
+            grid-area: 3 / 1 / auto / span 4 ;
+            height: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="div1">NavBar</div>
+        <div class="divdef">Div2</div>
+        <div class="divdef">Div3</div>
+        <div class="divdef">Div4</div>
+        <div class="divdef">Div5</div>
+        <div class="div6">Footer</div>
+    </div>
+</body>
+</html>
