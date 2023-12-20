@@ -36,12 +36,13 @@ nav {
   color: #2caeba;
 }
 
-ul {
+nav ul {
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
   list-style: none;
+
 }
 
 a {
@@ -134,8 +135,8 @@ span {
   gap: 30px;
 }
 .left-about {
-  width: 300px;
-  height: 200px;
+  width: 500px;
+  height: 400px;
   position: relative;
 }
 
@@ -175,6 +176,9 @@ span {
   color: white;
   background-color: #2caeba;
   padding: 1em 2em;
+}
+.right-about a:hover {
+  color: black;
 }
 
 .services
@@ -228,7 +232,131 @@ span {
     font-size: 2em;
 }
 
-@media (max-width: 600px) {
+.card{
+  height: 430px ;
+  overflow: hidden;
+  transition: all 1s;
+}
+
+.card-body
+{
+  background-color: #f3feff;
+  position: relative;
+}
+
+.small-Date
+{
+  position: absolute;
+  background-color: #33cedc;
+  padding: 0.5em 1em;
+  right: 0;
+  top: -40px;
+}
+.card-text
+{
+  color: hsl(210, 22%, 49%);
+}
+
+
+.card:hover
+{
+  box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.6);
+  transform: scale(1);
+}
+
+.feature a ,.input-email a
+{
+
+  background-color: #33cedc;
+  padding: 0.5em 1em;
+}
+.feature a:hover , .input-email a:hover
+{
+  color: #000;
+}
+.feature-center-a
+{
+  text-align: center;
+}
+.input-email input
+{
+  padding: 0.5em 1.2em;
+  outline: none;
+}
+.contact
+{
+  padding: 5em;
+  background-color: #2caeba;
+}
+.gallery div
+{
+  position: relative;
+  overflow: hidden;
+
+}
+.gallery img
+{
+  width: 100%;
+  height: 100%;
+
+}
+
+.gallery div:hover::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #2caeba6b; 
+  z-index: 1; 
+}
+
+
+.search-icon
+{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 2rem;
+  transform: translate(-50%, -50%);
+  color: white;
+  opacity: 0;
+  font-size: 1.5rem;
+}
+
+.gallery div:hover .search-icon
+{
+  opacity: 1;
+}
+
+.footer a ,.footer p
+{
+  color: white;
+  margin: unset;
+}
+.footer a:hover
+{
+  color: #2caeba;
+  transition: all 1s;
+}
+.footer i{
+  font-size: 1.5rem;
+}
+.footer
+{
+  background-color: hsl(209, 61%, 16%);
+  padding: 5em;
+}
+.footer ul
+{
+  gap: 20px;
+}
+ul
+{
+  padding-left: unset;
+}
+@media (max-width: 780px) {
   .menu {
     display: unset;
   }
