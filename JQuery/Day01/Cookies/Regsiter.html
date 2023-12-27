@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./bootstrap-5.3.2-dist/css/bootstrap.css">
+    <title>Register Using Cookies</title>
+</head>
+<body>
+    <div class=" container  row g-3 was-validated">
+        <div class="col-6">
+            <label for="validationCustom01" class="form-label">Full Name</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+          <div class="col-6">
+            <label for="validationCustomUsername" class="form-label">Username</label>
+            <div class="input-group has-validation">
+              <span class="input-group-text" id="inputGroupPrepend">@</span>
+              <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+              <div class="invalid-feedback">
+                Please choose a username.
+              </div>
+            </div>
+          </div>
+          <div class="col-10">
+            <label for="validationCustom01" class="form-label">email</label>
+            <input type="text" class="form-control" id="validationCustom01" value="" required>
+            <div class="valid-feedback">
+              Looks good!
+            </div>
+          </div>
+        <div class="form-check col-4 ">
+          <input type="radio" class="form-check-input" id="validationFormCheck2" value="1" name="Gender" required>
+          <label class="form-check-label" for="validationFormCheck1">Male</label>
+        </div>
+        <div class="form-check col-4">
+          <input type="radio" class="form-check-input" id="validationFormCheck3" value="2" name="Gender" required>
+          <label class="form-check-label" for="validationFormCheck1">Female</label>
+          <div class="invalid-feedback">Please Choice your Gender</div>
+        </div>
+        <div class="col-12  ">
+          <button class="btn btn-primary" type="submit" onclick="submit_()">Submit</button>
+        </div>
+    </div>
+    <script src="./bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./Cookies_Config.js"></script>
+    <script src="./Regsiter.js"></script>
+</body>
+</html>

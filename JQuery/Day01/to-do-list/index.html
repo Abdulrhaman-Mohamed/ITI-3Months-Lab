@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../Tabs/bootstrap-5.3.2-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="../JQuery.js"></script>
+    <title>to-do-list</title>
+    <style>
+        *
+        {
+            padding: 0;
+            margin: 0;
+        }
+        body
+        {
+            height: 90vh;
+            background-color: black;
+            color: white;
+        }
+        ul
+        {
+            list-style: none;
+            font-size: 1.6em;
+            font-weight: 600;
+            text-align: center;
+        }
+        li
+        {
+            position: relative;
+            width: 600px;
+            
+        }
+        i ,span
+        {
+            color: white;
+            position: absolute;
+            right: 0;
+            bottom: 3px;
+            font-size: .8em;
+            color: red;
+        }
+        span
+        {
+            left: 0px;
+            color: white;
+        }
+        .active
+        {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div class="d-flex justify-content-center align-items-center h-50">
+        <div  class="input-group mb-5 w-50  ">
+            <input id="to-do" type="text" class="form-control " placeholder="Enter Your List" aria-label="Enter Your List" aria-describedby="button-addon2">
+            <button  class="btn btn-outline-secondary" type="button" id="button-addon2">ADD</button>
+          </div>
+    </div>
+
+    <ul class="d-flex justify-content-center align-items-center flex-column  " id="add-to">
+    </ul>
+   <script src="../Tabs/bootstrap-5.3.2-dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./script.js"></script>
+</body>
+</html>
