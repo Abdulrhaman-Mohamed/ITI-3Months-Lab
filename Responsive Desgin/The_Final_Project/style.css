@@ -27,6 +27,12 @@ ul
     color: #8e8b8b;
 }
 
+a
+{
+    text-decoration: none;
+    color: black;
+}
+
 .white-force
 {
     color: white !important;
@@ -134,6 +140,7 @@ nav::after
 
 
 
+
 marquee
 {
     font-family: Trade;
@@ -148,6 +155,71 @@ marquee span
 }
 
 
+.plan .card , .plan
+{
+    background-color: rgb(241, 241, 241);
+    color: black;
+    text-align: center;
+}
+
+.plan .card a
+{
+    display: inline-block;
+    padding: 0.6em 2em;
+    border: 2px solid black;
+    font-weight: 600;
+    font-size: 0.9em;
+    transition: all 0.8s;
+    
+}
+
+.plan .card:hover a
+{
+    background-color: #4848e0;
+    color: white;
+    border: none;
+
+}
+.plan .card.mark-all-time a
+{
+    background-color: #4848e0;
+    color: white;
+    border: none;
+}
+
+.plan .card.mark-all-time 
+{
+    background-color: white;
+
+}
+
+.plan .card .card-body i
+{
+    color: #f362e2;
+    font-weight: bold;
+    margin-left: 8px;
+}
+
+.about .bg-pink
+{
+    background-color: #ff94df;
+
+}
+
+.about .progress
+{
+    height: 8px ;
+}
+
+.brands img 
+{
+    opacity: 0.5;
+}
+
+.brands img:hover
+{
+    opacity: 1;
+}
 @media (min-width:750px) {
     .info-cards .rounded-2
 {
@@ -158,6 +230,16 @@ marquee span
 {
     width: 80%;
     margin: 0 auto;
+}
+
+.game-card img 
+{
+    width: 50%;
+}
+
+.about-head , .about-prograss
+{
+    width: 50%;
 }
 
 }

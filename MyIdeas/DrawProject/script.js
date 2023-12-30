@@ -19,8 +19,11 @@ window.addEventListener("load", () => {
 
 tools_draw.forEach((el) => {
     el.addEventListener("click", () => {
+        //debugger
         document.querySelector(".draw-option.active-tool").classList.remove("active-tool");
+        document.querySelector(".draw-option.active").classList.remove("active");
         el.classList.add("active-tool");
+        el.classList.add("active");
     })
 });
 
