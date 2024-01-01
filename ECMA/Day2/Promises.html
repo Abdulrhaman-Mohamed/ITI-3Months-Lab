@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Posts of Users</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+
+    <style>
+        .btns {
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            background-color: gray;
+            flex-wrap: wrap;
+            border-radius: 8px;
+
+        }
+        button
+        {
+            border: none;
+            background-color: unset;
+            color: black;
+            width: 200px;
+            height: 15vh;
+            border-radius: 8px;
+            
+        }
+        button:hover
+        {
+            background-color: #9c9c9c;
+        }
+        .active
+        {
+            background-color: aliceblue;
+        }
+        ul{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-direction: column;
+            list-style: none;
+            font-size: 1.3em;
+            font-weight: 500;
+            gap: 10px;
+        }
+        li
+        {
+            background-color: #9c9c9c;
+            padding: 0.5em 1.5em;
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="btns">
+
+    </div>
+
+    <div class="posts">
+        <ul>
+        </ul>
+    </div>
+
+    <script src="./script.js"></script>
+</body>
+</html>
