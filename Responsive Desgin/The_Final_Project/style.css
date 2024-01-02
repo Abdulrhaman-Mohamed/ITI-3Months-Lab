@@ -18,7 +18,8 @@ body
 {
     color: white;
     background-color: #0c0c0c;
-    font-family:'DM Sans', sans-serif;;
+    font-family:'DM Sans', sans-serif;
+    overflow-x: hidden;
 }
 
 ul
@@ -55,6 +56,47 @@ h5
 {
     width: 100px;
 }
+
+
+header nav .left-section a
+{
+    display: inline-block;
+    margin-top: 20px;
+    color: white;
+    font-size: 1em;
+    font-weight: bold;
+}
+
+header nav .left-section li:hover
+{
+    border-bottom: 1px solid white;
+
+
+}
+
+header nav .nav-xxl
+{
+    height: 10vh;
+    padding: 4em;
+}
+
+header nav .right-section .notfy-num
+{
+    position: relative;
+}
+
+header nav .right-section .notfy-num::after
+{
+    content: "0";
+    position: absolute;
+    bottom: 0;
+    background-color: #4848e0;
+    border-radius: 50%;
+    right: 0.1px;
+    padding: 4px;
+    font-size: 6px;
+    color: white;
+}
 .bg-dark {
     background-color: #191818!important;
 }
@@ -75,11 +117,31 @@ h5
 {
     padding: 1em;
 }
+
+i
+{
+    cursor: pointer;
+}
+
+header .carousel-item .img-cursol
+{
+    width: 100%;
+}
+nav
+{
+    position: relative;
+}
+
+nav ul li:hover
+{
+    color: white;
+    cursor: pointer;
+}
 nav::after
 {
     content: "";
-    width: 90%;
-    margin-left: 5%;
+    width: 100%;
+    margin: 0 auto;
     position: absolute;
     height: 1px;
     background-color: #4d4d4d;
@@ -220,7 +282,106 @@ marquee span
 {
     opacity: 1;
 }
+
+
+.slick-dots
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+
+.slick-dots li button
+{
+    border: none;
+    border-radius: 50%;
+    background-color: #adadb6;
+    padding: 0.3em;
+}
+
+
+
+.footer-section .footer-content li
+{
+    margin-bottom: 8px;
+    transition:all 400ms;
+}
+
+.footer-section .footer-content a
+{
+    text-decoration:underline;
+    color: #8e8b8b;
+}
+
+.footer-section .footer-content .input-mail
+{
+    position: relative;
+}
+
+.footer-section .footer-content .input-mail input
+{
+    background-color: #0a0c0c;
+
+    border: none;
+    border-bottom: 1px solid #8e8b8b;
+    padding: 10px 35px 10px 27px;
+    color: #8e8b8b;
+    outline: none;
+
+}
+
+.footer-section .footer-content .input-mail i
+{
+    position: absolute;
+    font-size: 1.2em;
+}
+
+.footer-section .footer-content .input-mail .mail
+{
+    left: 0;
+    top: 13px;
+}
+
+.footer-section .footer-content .input-mail .arrow
+{
+    right: 0;
+    top: 13px;
+}
+
+.footer-section .footer-content li:hover
+{
+    color: white;
+    cursor: pointer;
+    border-bottom: 2px solid white;
+    margin-left: 20px;
+}
+
+
+
+.footer-section .header-footer .title-footer
+{
+   width: 100% !important;
+}
+
+.footer-section .footer-content .input-mail
+{
+    width: 90vw ;
+}
+
+.slick-dots li.slick-active button {
+    background-color: #4848e0; /* Color of the active dot */
+  }
+
+
 @media (min-width:750px) {
+    header .carousel-item .img-cursol
+    {
+        width: 50%;
+    }
+
+    
     .info-cards .rounded-2
 {
    width: 40%;
@@ -241,5 +402,17 @@ marquee span
 {
     width: 50%;
 }
+
+.footer-section .footer-content .input-mail
+{
+    width: unset;
+}
+
+.footer-section .header-footer .title-footer
+{
+   width: 50% !important;
+}
+
+
 
 }

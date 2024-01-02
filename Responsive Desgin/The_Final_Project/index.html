@@ -16,12 +16,37 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" href="style.css" />
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <title>Games To Try</title>
   </head>
   <body>
-    <header>
+    <header class="container">
       <nav>
+        <div class=" d-none d-xxl-block d-xxl-flex justify-content-between align-items-center gap-3 flex-row nav-xxl">
+
+          <div class="left-section d-flex justify-content-center align-items-center gap-5 ">
+            <img src="./images/logo-inverse.webp" alt="" srcset="">
+
+            <ul class=" d-flex justify-content-center align-items-center   gap-3">
+              <li><a href="">Home</a></li>
+              <li><a href="">Pages</a></li>
+              <li><a href="">Portfolio</a></li>
+              <li><a href="">Blog</a></li>
+              <li><a href="">Shop</a></li>
+            </ul>
+          </div>
+
+          <div class="right-section d-flex justify-content-center  align-items-center gap-4 ">
+            <i class="fa-solid fa-bag-shopping fs-2 notfy-num"></i>
+            <i class="fa-solid fa-magnifying-glass fs-4 "></i>
+            <i class="fa-solid fa-table-cells fs-4 "></i>
+          </div>
+        </div>
         <div
           class="d-xxl-none d-flex justify-content-between align-items-center p-3"
         >
@@ -95,7 +120,7 @@
           </div>
         </div>
       </nav>
-      <h1 class="p-3 title-header">REAL GAMING TASKES THE STAGE</h1>
+      <h1 class="p-3 title-header  ">REAL GAMING TASKES THE STAGE</h1>
 
       <div
         id="carouselExampleIndicators"
@@ -103,10 +128,11 @@
         data-bs-ride="carousel"
       >
         <div class="carousel-inner">
-          <div class="carousel-item active px-3">
-            <img
+          <div class="carousel-item active px-3 ">
+            <div class="d-md-flex d-lg-flex d-xl-flex justify-content-between    flex-md-row flex-lg-row flex-xl-row">
+              <img
               src="./images/wallpaperflare.com_wallpaper.jpg"
-              class="d-block w-100"
+              class="d-block img-cursol"
               alt="..."
             />
             <div class="card bg-dark p-2">
@@ -125,11 +151,14 @@
                 >
               </div>
             </div>
+            </div>
+
           </div>
-          <div class="carousel-item px-3">
-            <img
+          <div class="carousel-item  px-3 ">
+            <div class="d-md-flex d-lg-flex d-xl-flex justify-content-between    flex-md-row flex-lg-row flex-xl-row">
+              <img
               src="./images/wallpaperflare.com_wallpaper (1).jpg"
-              class="d-block w-100"
+              class="d-block img-cursol"
               alt="..."
             />
             <div class="card bg-dark p-2">
@@ -148,11 +177,14 @@
                 >
               </div>
             </div>
+            </div>
+
           </div>
-          <div class="carousel-item px-3">
-            <img
+          <div class="carousel-item  px-3 ">
+            <div class="d-md-flex d-lg-flex d-xl-flex justify-content-between    flex-md-row flex-lg-row flex-xl-row">
+              <img
               src="./images/wallpaperflare.com_wallpaper (2).jpg"
-              class="d-block w-100"
+              class="d-block img-cursol"
               alt="..."
             />
             <div class="card bg-dark p-2">
@@ -171,13 +203,15 @@
                 >
               </div>
             </div>
+            </div>
+
           </div>
         </div>
       </div>
     </header>
 
 
-    <section class=" container w-100 ">
+    <section class="  w-100 py-5">
         <div class="what-we-do  p-3 py-5">
             <h6 class="fw-bold fs-6">WHAT WE DO</h6>
             <p class=" fs-1 fw-bold ">
@@ -347,12 +381,167 @@
             
           </section>
 
-          <section class="brands bg-light d-flex justify-content-center align-items-center gap-2 flex-row flex-wrap py-3 ">
-            <img src="./images/w1-copyright.webp" alt="">
+          <section class="brands bg-light d-flex justify-content-center align-items-center gap-2 flex-row flex-wrap py-3 your-slick-carousel">
+
+           <img src="./images/w1-copyright.webp" alt="">
             <img src="./images/w2-copyright.webp" alt="">
             <img src="./images/w3-copyright.webp" alt="">
             <img src="./images/w4-copyright.webp" alt="">
+            <img src="./images/w1-copyright.webp" alt="">
+
           </section>
+
+
+          <section class="our-blog bg-light text-dark text-center ">
+            <p class=" fs-6 fw-bold ">OUR BLOG</p>
+            <h4 class=" display-3 fw-bold w-75 m-auto ">The latest news from the world of online gaming</h4>
+            <div class="cards text-start  your-slick-carousel-cards py-5 container ">
+              <div class="card rounded-0 border-0 px-3 ">
+                <div>
+                  <img src="./images/post16-copyright-1024x765.jpg" class="card-img-top" alt="...">
+                </div>
+
+                <div class="card-body">
+                  <span class=" fs-6  fw-bold ">GAMES</span>
+                  <p class="card-text fs-5 fw-bold ">Ultimate shooting games for a friendly battle</p>
+                  <p class=" text-secondary  d-flex justify-content-center align-items-center gap-2 text-start ">
+                    <span class=" d-inline-block ">March 24,2024</span>
+                    <span class=" d-inline-block " style="font-size: 0.4rem;"><i class="fa-solid fa-circle"></i></span>
+                    <span class=" d-inline-block ">March 24,2024</span>
+                  </p>
+                </div>
+              </div>
+
+              <div class="card rounded-0 border-0 px-3" >
+                <div>
+                  <img src="./images/post14-copyright-890x664.jpg" class="card-img-top" alt="...">
+                </div>
+
+                <div class="card-body">
+                  <span class=" fs-6  fw-bold ">GAMES</span>
+                  <p class="card-text fs-5 fw-bold ">We love these awesome simulation games!</p>
+                  <p class=" text-secondary  d-flex justify-content-center align-items-center gap-2 text-start ">
+                    <span class=" d-inline-block ">March 24,2024</span>
+                    <span class=" d-inline-block " style="font-size: 0.4rem;"><i class="fa-solid fa-circle"></i></span>
+                    <span class=" d-inline-block ">March 24,2024</span>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="card rounded-0 border-0 px-3" >
+                <div>
+                  <img src="./images/post15-copyright-600x448.jpg" class="card-img-top" alt="...">
+                </div>
+
+                <div class="card-body">
+                  <span class=" fs-6  fw-bold ">GAMES</span>
+                  <p class="card-text fs-5 fw-bold ">The mission you must complete: hot releases of May</p>
+                  <p class=" text-secondary  d-flex justify-content-center align-items-center gap-2 text-start ">
+                    <span class=" d-inline-block ">March 24,2024</span>
+                    <span class=" d-inline-block " style="font-size: 0.4rem;"><i class="fa-solid fa-circle"></i></span>
+                    <span class=" d-inline-block ">March 24,2024</span>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="card rounded-0 border-0 px-3" >
+                <div>
+                  <img src="./images/post18-copyright-890x664.jpg" class="card-img-top" alt="...">
+                </div>
+
+                <div class="card-body">
+                  <span class=" fs-6  fw-bold ">GAMES</span>
+                  <p class="card-text fs-5 fw-bold ">Become a virtual magician by playing the simulation</p>
+                  <p class=" text-secondary  d-flex justify-content-center align-items-center gap-2 text-start ">
+                    <span class=" d-inline-block ">March 24,2024</span>
+                    <span class=" d-inline-block " style="font-size: 0.4rem;"><i class="fa-solid fa-circle"></i></span>
+                    <span class=" d-inline-block ">March 24,2024</span>
+                  </p>
+                </div>
+              </div>
+
+
+              <div class="card rounded-0 border-0 px-3" >
+                <div>
+                  <img src="./images/post17-copyright-1024x765.jpg" class="card-img-top" alt="...">
+                </div>
+
+                <div class="card-body">
+                  <span class=" fs-6  fw-bold ">GAMES</span>
+                  <p class="card-text fs-5 fw-bold ">The best racing games that are better played on PS</p>
+                  <p class=" text-secondary  d-flex justify-content-center align-items-center gap-2 text-start ">
+                    <span class=" d-inline-block ">March 24,2024</span>
+                    <span class=" d-inline-block " style="font-size: 0.4rem;"><i class="fa-solid fa-circle"></i></span>
+                    <span class=" d-inline-block ">March 24,2024</span>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <footer >
+            <div class="footer-section bg-black d-flex justify-content-center  flex-column gap-5 px-3 ">
+              <div class="header-footer d-flex justify-content-around  align-items-start align-items-lg-center align-items-md-center align-items-xl-center    gap-5 flex-column flex-md-row flex-lg-row flex-xl-row ">
+                <div class="w-25 ">
+                  <img src="./images/logo-inverse.webp" alt="" srcset="" class=" d-inline-block py-5">
+                </div>
+               
+                <div class="  title-footer">
+                  <h4 class=" display-6 fw-bold d-inline-block text-start  ">We develop & create digital future</h4>
+                </div>
+  
+                
+              </div>
+  
+              <div class="footer-content d-flex justify-content-around align-items-start align-items-lg-center align-items-md-center align-items-xl-center  gap-4 flex-column flex-md-row flex-lg-row flex-xl-row">
+  
+                <ul class="Signup-footer">
+                  <h5 class=" fw-bold text-light ">Newsletter Signup</h5>
+                  <li>
+                    <div class="input-mail">
+                      <input type="email" name="" id="" class=" w-100 " placeholder="Enter Your Email Here ">
+                      <i class="fa-solid fa-envelope mail"></i>
+                      <i class="fa-solid fa-arrow-right arrow"></i>
+                    </div>
+                  </li>
+                  <li><input type="checkbox" name="" id=""> <span>I agree to the <a href="">Privacy Policy.</a></span></li>
+                </ul>
+  
+  
+  
+                <ul class="">
+                  <h5 class=" fw-bold text-light mb-2">Socials</h5>
+                  <li>Facebook</li>
+                  <li>Twitter</li>
+                  <li>Dribble</li>
+                  <li>Instagram</li>
+                </ul>
+  
+                <ul class="">
+                  <h5 class=" fw-bold text-light mb-2">Menu</h5>
+                  <li>Home</li>
+                  <li>Services</li>
+                  <li>About Us</li>
+                  <li>Features</li>
+                  <li>Contact</li>
+                </ul>
+  
+                <ul class="">
+                  <h5 class=" fw-bold text-light mb-2  ">Say Hello</h5>
+                  <li>info@email.com</li>
+                </ul>
+              </div>
+            </div>
+            
+
+            <hr style="width: 95%; margin: 0 auto">
+
+            <p class=" text-secondary py-3  " style="width: 95%; margin: 0 auto;">AncoraThemes © 2024. All rights reserved.
+            </p>
+
+          </footer>
 
 
 
@@ -361,5 +550,75 @@
       integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
       crossorigin="anonymous"
     ></script>
+    <script>
+  $(document).ready(function(){
+
+
+
+    
+
+
+    $('.your-slick-carousel-cards').slick({
+      
+      slidesToShow: 4, 
+      slidesToScroll: 1,
+      autoplay: true,
+      dots: true,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1024, 
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 768, 
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 576, 
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+
+    $('.your-slick-carousel').slick({
+      
+      slidesToShow: 4, 
+      slidesToScroll: 1,
+      autoplay: true,
+      dots: false,
+      arrows: false,
+      responsive: [
+        {
+          breakpoint: 1024, 
+          settings: {
+            slidesToShow: 3,
+          }
+        },
+        {
+          breakpoint: 768, 
+          settings: {
+            slidesToShow: 2,
+          }
+        },
+        {
+          breakpoint: 576, 
+          settings: {
+            slidesToShow: 1,
+          }
+        }
+      ]
+    });
+
+
+    $(".slick-dots li button").empty();
+  });
+</script>
   </body>
 </html>
