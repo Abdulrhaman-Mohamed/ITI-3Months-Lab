@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
+    <title>Hangman</title>
+</head>
+<body>
+
+
+
+
+
+
+    <section class="Game-now d-flex justify-content-around algin-items-center gap-4 flex-column  ">
+        <section class="start-game d-flex justify-content-center align-items-center gap-3 flex-column">
+            <button id="get-start">Start</button>
+            <button id="list-button">Lists</button>
+        </section>
+        <section class="word d-flex justify-content-center align-items-center gap-2 pt-3 d-none ">
+
+        </section>
+        <div id="canvas-letters" class="d-flex justify-content-between align-items-center d-none">
+            <section class="hangman-canvas d-flex justify-content-center align-items-center w-50 ">
+                <canvas id="hangman-draw" width="400"
+                height="400"></canvas>
+            </section>
+            <section class="letters d-flex justify-content-center align-items-center gap-3 flex-wrap pb-5 px-2 w-50 ">
+            </section>
+        </div>
+
+        <div id="list" class=" d-none">
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Name</th>
+                    <th scope="col">Secore</th>
+                  </tr>
+                </thead>
+                <tbody class="table-group-divider">
+
+                </tbody>
+        </div>
+
+    </section>
+
+    <script src="./script.js"></script>
+</body>
+</html>

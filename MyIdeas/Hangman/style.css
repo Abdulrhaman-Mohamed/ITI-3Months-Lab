@@ -1,0 +1,112 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body
+{
+    background-color: black;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+span
+{
+    color: white;
+}
+
+button
+{
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 0.7em 1.2em;
+    min-width: 60px;
+
+}
+
+span
+{
+    display: inline-block;
+    font-size: 1.5em;
+
+}
+
+
+
+
+.Game-now
+{
+    width: 90%;
+    height: 90%;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 12px;
+    margin: 0 auto;
+}
+
+
+.start-game button
+{
+    padding: 1em 5em;
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.start-game button:hover
+{
+    background-color: transparent;
+    color: white;
+}
+
+#list
+{
+    overflow-y: scroll;
+    height: 60vh;
+    width: 90%;
+    margin: 0 auto;
+}
+
+@media (max-width:750px) {
+
+    canvas
+{
+
+
+    height: 200px;
+}
+
+
+button
+{
+    border-radius: 8px;
+    border: 1px solid white;
+    padding: 0.4em 0.7em;
+    min-width: 39px;
+}
+}
+
+
+@media (max-height:500px) {
+
+    
+    button
+    {
+        border-radius: 8px;
+        font-size: 10px;
+        border: 1px solid white;
+        padding: 0.4em 0.7em;
+        min-width: 39px;
+    }
+
+    canvas
+{
+    width: 60%;
+    height: 50%;
+}
+}
+
+
+
+
+
