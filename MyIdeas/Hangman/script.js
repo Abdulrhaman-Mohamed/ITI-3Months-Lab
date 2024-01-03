@@ -1,6 +1,6 @@
 var canvas = document.getElementById("hangman-draw");
 var context = canvas.getContext("2d");
-let secore = 0;
+let secore = 0 , correct_click =0;
 
 //Start-Game
 $("#get-start").click(function () {
@@ -39,25 +39,31 @@ $(".letters").on("click", "button", function () {
   if (indexesOfCharaters.length > 0) {
     indexesOfCharaters.forEach(function (el) {
       $(`.word span:eq(${el})`).text(char);
+      correct_click++;
     });
     secore += 20;
+
+
+    //Remove Button after chose correctly
     $(this).remove();
+
+
+    // if number of click == length of word then he get the correct word
+    if(correct_click == word.length)
+    {
+      setsecore();
+      showList();
+    }
+
+
+
   } else {
     //debugger
     wrongAnwser++;
     secore -= 10;
     drawHangman(wrongAnwser);
     if (wrongAnwser > 9) {
-      var getName = prompt("Please Enter Your Name..");
-      while (!getName || isFinite(getName)) {
-        alert("Please Enter Your name!!!");
-        getName = prompt("Please Enter Your Name..");
-      }
-      // store secore in localStorage
-      localStorage.setItem(getName, secore);
-
-      // make secore = 0 return in null secore
-      secore = 0;
+      setsecore();
       showList();
     }
   }
@@ -204,4 +210,19 @@ function drawHangman(step) {
     context.arc(250, 145, 5, 0, Math.PI);
     context.stroke();
   }
+}
+
+//set Secore in localStorage
+function setsecore()
+{
+  var getName = prompt("Please Enter Your Name..");
+      while (!getName || isFinite(getName)) {
+        alert("Please Enter Your name!!!");
+        getName = prompt("Please Enter Your Name..");
+      }
+      // store secore in localStorage
+      localStorage.setItem(getName, secore);
+
+      // make secore = 0 return in null secore
+      secore = 0;
 }
