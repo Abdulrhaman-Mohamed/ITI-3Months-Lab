@@ -34,6 +34,12 @@ a
     color: black;
 }
 
+header nav .offcanvas-body a
+{
+    color: #8e8b8b;
+}
+
+
 .white-force
 {
     color: white !important;
@@ -96,6 +102,22 @@ header nav .right-section .notfy-num::after
     padding: 4px;
     font-size: 6px;
     color: white;
+}
+
+header .carousel-indicators
+{
+    position: unset;
+    padding-top: 1em;
+}
+
+header .carousel-indicators button
+{
+    background-color: #4848e0 !important;
+    border-radius: 50%;
+    padding: 0.5em !important;
+    background-clip: unset;
+    width: 0px !important;
+    height: 0px !important;
 }
 .bg-dark {
     background-color: #191818!important;
@@ -272,6 +294,8 @@ marquee span
 {
     height: 8px ;
 }
+
+
 
 .brands img 
 {
