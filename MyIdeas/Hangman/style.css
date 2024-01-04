@@ -109,6 +109,11 @@ button
         height: 100%;
     }
 
+    .Game-now .word
+    {
+        margin-top: 100px;
+    }
+
     
     button
     {
