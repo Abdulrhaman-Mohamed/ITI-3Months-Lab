@@ -2,35 +2,63 @@ var canvas = document.getElementById("hangman-draw");
 var context = canvas.getContext("2d");
 let secore = 0 , correct_click =0;
 
+let words = [
+  "COMPUTER",
+  "CAT",
+  "DOG",
+  "COLOR",
+  "HORES",
+  "HUMAN",
+  "WORLD",
+  "JAVASCRIPT",
+  "MOUSE",
+  "MAN",
+  "WOMAN",
+];
+
+let hints = [
+  "Electronic device with various functions",
+  "Small domesticated carnivorous mammal",
+  "Domesticated carnivorous mammal",
+  "Visual perception of different wavelengths of light",
+  "Large domesticated mammal",
+  "Homo sapiens",
+  "Planet Earth and all life upon it",
+  "Programming language used for web development",
+  "Small rodent often kept as a pet",
+  "Adult human male",
+  "Adult human female",
+];
+
+
+
 //Start-Game
 $("#get-start").click(function () {
+  // Make it zero
   $(".letters").html("");
+  $(".word").html("");
+  context.clearRect(0, 0, canvas.width, canvas.height);
   //Print all letters in section letters
   for (let i = 65; i <= 90; i++) {
     $(".letters").append(`<button>${String.fromCharCode(i)}</button>`);
   }
+  //debugger
   wrongAnwser = 0;
-  words = [
-    "COMPUTER",
-    "CAT",
-    "DOG",
-    "COLOR",
-    "HORES",
-    "HUMAN",
-    "WORLD",
-    "JAVASCRIPT",
-    "MOUSE",
-    "MAN",
-    "WOMAN",
-  ];
+
   word = words[Math.floor(Math.random() * 11)];
+  $(".word").append(`<p class=" d-flex justify-content-center align-items-center gap-2"></p>`);
   word.split("").forEach((element) => {
-    $(".word").append(`<span>_</span>`);
+    //debugger
+    $(".word p").append(`<span>_</span>`);
   });
+  
 
   $(".word").removeClass("d-none");
   $("#canvas-letters").removeClass("d-none");
   $(".start-game").addClass("d-none");
+  $("#back-Home").removeClass("d-none");
+  $("#back-Home p").html(`Your Secore : ${secore}`);
+  
 });
 
 $(".letters").on("click", "button", function () {
@@ -42,6 +70,7 @@ $(".letters").on("click", "button", function () {
       correct_click++;
     });
     secore += 20;
+    $("#back-Home p").html(`Your Secore : ${secore}`);
 
 
     //Remove Button after chose correctly
@@ -61,30 +90,47 @@ $(".letters").on("click", "button", function () {
     //debugger
     wrongAnwser++;
     secore -= 10;
+    $("#back-Home p").html(`Your Secore : ${secore}`);
     drawHangman(wrongAnwser);
     if (wrongAnwser > 9) {
       setsecore();
       showList();
     }
+
+    if(wrongAnwser === 5)
+    {
+      $(".word").append(`<p id="hint">${hints[words.indexOf(word)]}</p>`);
+    }
   }
+
+  
 });
 
 // List Button
 $("#list-button").click(function () { 
   $(".start-game").addClass("d-none");
+  
   showList();
   
+});
+
+// Back To home on click
+$("#back-Home").click(function () { 
+  BackHome();
 });
 
 
 // Show List
 function showList() {
+  //debugger
   $(".word").addClass("d-none");
   $("#canvas-letters").addClass("d-none");
   $("#list").removeClass("d-none");
+  $("#back-Home").removeClass("d-none");
 
   //Make Table with null
   $("#list table tbody").html("");
+  $("#back-Home p").html(``);
 
   //console.log(localStorage);
   for (var i = 0; i < localStorage.length; i++) {
@@ -216,13 +262,21 @@ function drawHangman(step) {
 function setsecore()
 {
   var getName = prompt("Please Enter Your Name..");
-      while (!getName || isFinite(getName)) {
-        alert("Please Enter Your name!!!");
-        getName = prompt("Please Enter Your Name..");
-      }
-      // store secore in localStorage
-      localStorage.setItem(getName, secore);
-
+  if(getName && !isFinite(getName))
+  {
+          // store secore in localStorage
+          localStorage.setItem(getName, secore);
+  }
       // make secore = 0 return in null secore
       secore = 0;
+}
+
+// Back-To Home to start 
+function BackHome()
+{
+  $(".word").addClass("d-none");
+  $("#canvas-letters").addClass("d-none");
+  $("#list").addClass("d-none");
+  $(".start-game").removeClass("d-none");
+  $("#back-Home").addClass("d-none");
 }
