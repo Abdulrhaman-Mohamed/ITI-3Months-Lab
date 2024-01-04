@@ -38,6 +38,7 @@ $("#get-start").click(function () {
   $(".letters").html("");
   $(".word").html("");
   context.clearRect(0, 0, canvas.width, canvas.height);
+  correct_click = 0;
   //Print all letters in section letters
   for (let i = 65; i <= 90; i++) {
     $(".letters").append(`<button>${String.fromCharCode(i)}</button>`);
