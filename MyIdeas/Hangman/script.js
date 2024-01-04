@@ -4,30 +4,58 @@ let secore = 0 , correct_click =0;
 
 let words = [
   "COMPUTER",
-  "CAT",
-  "DOG",
   "COLOR",
-  "HORES",
   "HUMAN",
   "WORLD",
   "JAVASCRIPT",
   "MOUSE",
   "MAN",
   "WOMAN",
+  "SUN",
+  "MOON",
+  "OCEAN",
+  "MOUNTAIN",
+  "FOREST",
+  "ELEPHANT",
+  "GUITAR",
+  "PIANO",
+  "UNIVERSE",
+  "BICYCLE",
+  "TELEVISION",
+  "BOOK",
+  "COFFEE",
+  "GARDEN",
+  "RIVER",
+  "FIRE",
+  "WATERFALL",
 ];
 
 let hints = [
   "Electronic device with various functions",
-  "Small domesticated carnivorous mammal",
-  "Domesticated carnivorous mammal",
   "Visual perception of different wavelengths of light",
-  "Large domesticated mammal",
   "Homo sapiens",
   "Planet Earth and all life upon it",
   "Programming language used for web development",
   "Small rodent often kept as a pet",
   "Adult human male",
   "Adult human female",
+  "Star at the center of the solar system",
+  "Natural satellite of Earth",
+  "Vast body of saltwater",
+  "Elevated land mass",
+  "Large area covered chiefly with trees and undergrowth",
+  "Gentle giant with a trunk and tusks",
+  "Stringed musical instrument",
+  "Musical instrument with keys",
+  "All of space, time, matter, and energy",
+  "Human-powered vehicle with two wheels",
+  "Electronic device for watching broadcasts",
+  "Written or printed work consisting of pages",
+  "Beverage made from roasted coffee beans",
+  "Cultivated area of flowers, plants, or vegetables",
+  "Natural flowing watercourse",
+  "Combustion process producing heat and light",
+  "Cascade of water falling from a height",
 ];
 
 
@@ -39,6 +67,7 @@ $("#get-start").click(function () {
   $(".word").html("");
   context.clearRect(0, 0, canvas.width, canvas.height);
   correct_click = 0;
+  secore=0;
   //Print all letters in section letters
   for (let i = 65; i <= 90; i++) {
     $(".letters").append(`<button>${String.fromCharCode(i)}</button>`);
@@ -46,7 +75,7 @@ $("#get-start").click(function () {
   //debugger
   wrongAnwser = 0;
 
-  word = words[Math.floor(Math.random() * 11)];
+  word = words[Math.floor(Math.random() * 25)];
   $(".word").append(`<p class=" d-flex justify-content-center align-items-center gap-2"></p>`);
   word.split("").forEach((element) => {
     //debugger
