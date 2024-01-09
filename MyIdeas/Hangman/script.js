@@ -81,6 +81,9 @@ $("#get-start").click(function () {
     //debugger
     $(".word p").append(`<span>_</span>`);
   });
+
+
+  $(".word").append(`<p id="hint">${hints[words.indexOf(word)]}</p>`);
   
 
   $(".word").removeClass("d-none");
@@ -100,18 +103,17 @@ $(".letters").on("click", "button", function () {
       correct_click++;
     });
     secore += 20;
-    $("#back-Home p").html(`Your Secore : ${secore}`);
+    $("#back-Home p").html(`Your Points : ${secore}`);
 
-
+    
     //Remove Button after chose correctly
-    $(this).remove();
+    $(this).attr("disabled",true);
 
 
     // if number of click == length of word then he get the correct word
     if(correct_click == word.length)
     {
-      setsecore();
-      showList();
+      swtichAlert(word , "S");
     }
 
 
@@ -123,14 +125,10 @@ $(".letters").on("click", "button", function () {
     $("#back-Home p").html(`Your Secore : ${secore}`);
     drawHangman(wrongAnwser);
     if (wrongAnwser > 9) {
-      setsecore();
-      showList();
+      swtichAlert(word , "W");
     }
 
-    if(wrongAnwser === 5)
-    {
-      $(".word").append(`<p id="hint">${hints[words.indexOf(word)]}</p>`);
-    }
+
   }
 
   
@@ -145,7 +143,7 @@ $("#list-button").click(function () {
 });
 
 // Back To home on click
-$("#back-Home").click(function () { 
+$("#back-Home button").click(function () { 
   BackHome();
 });
 
@@ -291,14 +289,42 @@ function drawHangman(step) {
 //set Secore in localStorage
 function setsecore()
 {
-  var getName = prompt("Please Enter Your Name..");
-  if(getName && !isFinite(getName))
-  {
-          // store secore in localStorage
-          localStorage.setItem(getName, secore);
-  }
-      // make secore = 0 return in null secore
-      secore = 0;
+  // var getName = prompt("Please Enter Your Name..");
+  // if(getName && !isFinite(getName))
+  // {
+  //         // store secore in localStorage
+  //         localStorage.setItem(getName, secore);
+  // }
+  //     // make secore = 0 return in null secore
+  //     secore = 0;
+
+
+
+  swal({
+    text: "Please Enter Your Name....?",
+    content: "input",
+  })
+  .then((value) => {
+    // Check if the user clicked "Enter" and entered a name
+    if (value !== null && value !== "") {
+      // Save the name in local storage with the entered name as the key
+      localStorage.setItem(value, secore);
+      swal("Name saved successfully!", { icon: "success" });
+    } else {
+      swal("Name not entered or canceled.", { icon: "info" });
+    }
+  })
+  .then(()=>{
+    showList();
+    // make secore = 0 return in null secore
+    secore = 0;
+  })
+  .catch((error) => {
+    // Handle errors or if the user closes the prompt
+    console.error("Error:", error);
+  });
+
+
 }
 
 // Back-To Home to start 
@@ -309,4 +335,37 @@ function BackHome()
   $("#list").addClass("d-none");
   $(".start-game").removeClass("d-none");
   $("#back-Home").addClass("d-none");
+}
+
+
+// Get wrong and success alert 
+function swtichAlert(word , type)
+{
+  var title_ 
+  , text_ 
+  , icon_ ;
+  if(type === "W")
+  {
+     title_ = "hard Luck!"
+    , text_ = `You answered wrong and the word was ${word} `
+    , icon_ = "error";
+
+  }
+  if(type === "S")
+  {
+    title_ = "Good Job!"
+    , text_ = `You answered Success and the word was ${word} `
+    , icon_ = "success";
+  }
+  swal({
+
+    title: title_,
+    text: text_,
+    icon: icon_,
+  }).then(()=>{
+    setsecore();
+  }).catch((error) => {
+    // Handle errors or if the user closes the prompt
+    console.error("Error:", error);
+  });
 }

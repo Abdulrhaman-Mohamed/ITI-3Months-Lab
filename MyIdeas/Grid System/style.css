@@ -1,0 +1,32 @@
+*
+{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body
+{
+    background-color: black;
+    overflow: hidden;
+}
+
+.gridcell
+{
+    float: left;
+}
+
+.gridcell.blocked
+{
+    background-color: #eee;
+}
+
+.gridcell.out-cell
+{
+    background-color: lightgreen;
+}
+
+.gridcell.in-cell
+{
+    background-color: coral;
+}
