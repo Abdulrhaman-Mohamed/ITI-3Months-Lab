@@ -1,0 +1,39 @@
+.btn{
+
+    a{
+
+        text-decoration: none;
+    }
+    font-family: $font-family;
+    display: inline-block;
+    font-weight: 600;
+    text-transform: capitalize;
+    background-color:transparent;
+    &--rounded{
+        a{
+    
+            color:$black-color;
+            border:2px solid $black-color;
+            border-radius: 21px;
+            padding: 7px 24px;
+            &:hover{
+              @include eleHover(white ,$black-color );
+            }
+        }
+    }
+    &--rectangle{
+        a{
+            text-transform: uppercase;
+            padding: 11px;
+            color:$secondary-color;
+
+            font-size: 12px;
+            &:hover{
+                 @include eleHover();
+               
+            }
+        }
+
+    }
+}
+

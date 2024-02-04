@@ -1,0 +1,33 @@
+//abstract
+@import "./abstract/variables";
+@import "./abstract/mixins";
+
+
+//base
+@import "./base/rest";
+
+
+
+//componentes
+@import "./components/header-section";
+@import "./components/slider-arrow";
+@import "./components/card";
+@import "./components/title-card";
+@import "./components/button";
+@import "./components/container";
+@import "./components/card-department";
+@import "./components/card-resourse";
+@import "./components/footer";
+
+
+//layout
+@import "./layout/doctors";
+@import "./layout/header-navgitor-layout";
+@import "./layout/slider-header-landing";
+@import "./layout/About-Us-layout";
+@import "./layout/department-layout";
+@import "./layout/insurance-layout";
+@import "./layout/qoute-layout";
+
+//pages
+@import "./pages/home-page";

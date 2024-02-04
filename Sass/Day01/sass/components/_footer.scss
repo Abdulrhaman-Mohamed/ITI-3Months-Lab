@@ -1,0 +1,63 @@
+.footer{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 30px 0;
+    background-color: rgba(20, 20, 20, 0.901);
+    color: white;
+    ul{
+        list-style: none;
+        li{
+            margin-top: 5px;
+        }
+    }
+    span{
+        color: $lighter-color;
+    }
+    h2{
+        padding-bottom: 20px;
+    }
+
+    a{
+        color:$lighter-color ;
+        text-decoration: none;
+    }
+    &--cols{
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 50px;
+        &__col3{
+            p{
+                font-size: 30px;
+            }
+        }
+
+        &__col4{
+            ul{
+                display: flex;
+                gap: 5px;
+            }
+
+            a{
+                color: white;
+                padding: 6px;
+            }
+
+        }
+
+        @media (max-width:950px) {
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
+
+    &--copy
+    {
+        border-top: 1px solid $lighter-color;
+        text-align: center;
+        span{
+            display: inline-block;
+            margin-top: 25px;
+        }
+        
+    }
+    
+}

@@ -1,0 +1,43 @@
+.doctor-layout
+{
+    padding: 0 180px;
+    &__cards{
+        display: flex;
+        justify-content: space-between;
+        gap: 25px;
+        flex-wrap: wrap;
+        margin-bottom: 25px;
+    }
+    .header
+    {
+        padding: 50px 0;
+    }
+
+    .header-and-arrow
+    {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .arrow{
+            display: flex;
+            gap: 7px;
+            #left-arrow{
+                transform: rotate(180deg);
+                color: $primary-color;
+            }
+        }
+
+    }
+
+    &--arrow-title{
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
+        & .slider-arrow
+        {
+            color: $black-color;
+        }
+    }
+}

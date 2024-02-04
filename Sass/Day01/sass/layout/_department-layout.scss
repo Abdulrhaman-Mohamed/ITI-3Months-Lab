@@ -1,0 +1,35 @@
+.department-layout
+{
+
+    &--Content-Text
+    {
+        margin-bottom: 40px;
+    }
+
+    &--cards
+    {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 50px;
+
+
+        &__card
+        {
+            width: 30%;
+        }
+
+    }
+
+    &--button
+    {
+        width: 100%;
+        padding: 40px;
+        text-align: center;
+    }
+}
+
+.department-layout-gray
+{
+    background-color: #f4f4f4;
+}

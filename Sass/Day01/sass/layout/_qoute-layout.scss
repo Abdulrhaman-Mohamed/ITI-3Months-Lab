@@ -1,0 +1,60 @@
+.qoute-layout{
+    background-color: $primary-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 30px;
+    color: white;
+    padding: 40px 0;
+    font-family: Arial, Helvetica, sans-serif;
+    letter-spacing: 1px;
+    &--icon
+    {
+        &__circle{
+
+            position: relative;
+            font-size: 60px;
+            i{
+                
+                position: absolute;
+                font-size: 30px;
+                left: 28%;
+                top: 24%;
+            }
+        }
+    }
+
+    &--content{
+        text-align: center;
+        width: 60%;
+        padding: 20px;
+        position: relative;
+        &__i-top
+        {
+            position: absolute;
+            left: 0;
+            top: 0;
+        }
+        &__i-bottom
+        {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+    }
+
+    &--person{
+        text-align: center;
+
+        &__border
+        {
+            margin: 0 auto;
+            width: 50%;
+            border-top: 2px solid $secondary-color;
+        }
+        h4{
+            padding: 8px;
+        }
+    }
+}

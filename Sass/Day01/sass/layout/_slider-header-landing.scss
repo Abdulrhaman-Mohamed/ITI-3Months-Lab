@@ -1,0 +1,86 @@
+.slider-header-landing
+{
+    background-image: url("https://images.unsplash.com/photo-1504813184591-01572f98c85f?q=80&w=1771&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D");
+    background-repeat: no-repeat;
+    height: 80vh;
+    color: white;
+    position: relative;
+    &--title{
+        position: absolute;
+        top: 50%;
+        left: 180px;
+        font-weight: 800;
+        h2{
+            font-size: 52px;   
+        }
+        p{
+            font-size: 21px;
+            margin: 15px 0;
+        }
+        span{
+            font-size: 20px;
+            font-weight: 300;
+            text-decoration: underline;
+        }
+    }
+
+    &--more-info{
+        right: 0;
+        margin: 0 auto;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+
+        &__title-card{
+            color: white;
+            font-size: 40px;
+            display: flex;
+            align-items: center;
+            background-color: $secondary-color;
+            gap: 20px;
+            p{
+                color: white;
+            }
+
+            .slider-arrow
+            {
+                i{
+                    color: white;
+                }
+            }
+
+            #last-title-card
+            {
+               display: flex; 
+               flex-direction: column;
+               align-items: center;
+               gap: 4px;
+               padding-left: 20px;
+            }
+
+            // @media (max-width:950px) {
+            //     padding-left: unset;
+            //     padding-right: unset;
+            // }
+
+
+        }
+
+        #last-card-header
+        {
+            padding-right: 20px;
+            background-color: $primary-color;
+        }
+
+        #second-card-header
+        {
+            background-color: #3aabdd;
+        }
+
+
+
+    }
+}

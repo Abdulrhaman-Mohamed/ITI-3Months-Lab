@@ -1,0 +1,17 @@
+.insurance-layout
+{
+    width: 100%;
+    &--cards-grid{
+        width: 100%;
+        display: flex;
+        justify-content:center ;
+        flex-wrap: wrap;
+
+        img{
+            width: 184px;
+            padding: 38px;
+            border: 1px solid $lighter-color;
+        }
+
+    }
+}

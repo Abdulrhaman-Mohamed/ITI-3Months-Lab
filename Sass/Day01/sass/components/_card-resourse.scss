@@ -1,0 +1,26 @@
+.resource-card
+{
+    width: 30%;
+    &--img
+    {
+        img{
+            width: 100%;
+        }
+    }
+
+    &--text
+    {
+        padding: 20px;
+        h2{
+            margin-bottom: 8px;
+        }
+        span{
+            color: $lighter-color;
+        }
+    }
+
+    &:hover
+    {
+        @include resuotceHover();
+    }
+}

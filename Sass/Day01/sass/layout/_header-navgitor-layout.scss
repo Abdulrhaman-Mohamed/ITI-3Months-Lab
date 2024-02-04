@@ -1,0 +1,44 @@
+.header-navgitor-layout{
+    width: 90%;
+    margin: 0 auto;
+    &--details-site
+    {
+        display: flex;
+        justify-content: flex-end;
+        gap:15px;
+        padding-top: 10px;
+        margin-right: 5px;
+        p{
+            span{
+                display: inline-block;
+                color: $lighter-color;
+                margin-left: 5px;
+            }
+        }
+    }
+
+    &--navgaitor{
+
+        padding:50px 0;
+        display: flex;
+        justify-content: space-between;
+
+        &__logo{
+            width: 143px;
+            height: 40px;
+            img{
+                width: 100%;
+            }
+
+        }
+    }
+    &--link{
+        display: flex;
+        list-style: none;
+        text-transform: lowercase;
+    }
+
+    @media (max-width:950px) {
+        display: none;
+    }
+}

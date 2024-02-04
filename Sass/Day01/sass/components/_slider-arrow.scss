@@ -1,0 +1,15 @@
+.slider-arrow{
+    color: $secondary-color;
+    &--circle{
+        font-size: 28px;
+        position: relative;
+        &_right-arrow{
+            position: absolute;
+            font-size: 18px;
+            top: 21%;
+            left: 5px;
+        }
+    }
+
+
+}

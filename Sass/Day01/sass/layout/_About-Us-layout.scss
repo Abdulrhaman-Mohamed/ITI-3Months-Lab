@@ -1,0 +1,24 @@
+.About-Us-layout{
+    display: flex;
+    justify-content: space-between;
+
+
+    &--Content-Text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        width: 65%;
+
+        p{
+            font-size: 17px;
+            color: $lighter-color;
+        }
+    }
+
+    &--img
+    {
+        img{
+            box-shadow: 5px 5px 10px rgba($color: #000000, $alpha: 0.2);
+        }
+    }
+}
