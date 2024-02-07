@@ -34,6 +34,7 @@ nav {
   font-size: 2em;
   font-weight: bold;
   color: #2caeba;
+  cursor: pointer;
 }
 
 nav ul {
@@ -51,6 +52,7 @@ a {
 }
 .middle-section a:hover {
   color: #2caeba;
+  cursor: pointer;
 }
 
 .right-section {
@@ -64,6 +66,10 @@ a {
 
 .right-section a {
   color: #2caeba;
+}
+
+.right-section a:hover {
+  color: white;
 }
 
 .hero-section {
@@ -107,6 +113,7 @@ a {
 .hero-section a:hover {
   color: white;
   background-color: transparent;
+  cursor: pointer;
 }
 .menu {
   display: none;
@@ -179,6 +186,7 @@ span {
 }
 .right-about a:hover {
   color: black;
+  cursor: pointer;
 }
 
 .services
@@ -262,6 +270,7 @@ span {
 {
   box-shadow: 1px 1px 20px rgba(0, 0, 0, 0.6);
   transform: scale(1);
+  cursor: pointer;
 }
 
 .feature a ,.input-email a
@@ -273,6 +282,7 @@ span {
 .feature a:hover , .input-email a:hover
 {
   color: #000;
+  cursor: pointer;
 }
 .feature-center-a
 {
@@ -310,6 +320,7 @@ span {
   height: 100%;
   background-color: #2caeba6b; 
   z-index: 1; 
+  cursor: pointer;
 }
 
 
@@ -328,6 +339,7 @@ span {
 .gallery div:hover .search-icon
 {
   opacity: 1;
+  cursor: pointer;
 }
 
 .footer a ,.footer p
@@ -339,6 +351,7 @@ span {
 {
   color: #2caeba;
   transition: all 1s;
+  cursor: pointer;
 }
 .footer i{
   font-size: 1.5rem;
@@ -357,8 +370,13 @@ ul
   padding-left: unset;
 }
 @media (max-width: 780px) {
+
+  .right-section a:hover {
+    color: black;
+  }
   .menu {
     display: unset;
+    cursor: pointer;
   }
   nav {
     justify-content: space-between;
