@@ -5,7 +5,7 @@
 
 Hangman
 -
-https://github.com/Abdulrhaman-Mohamed/ITI-3Months-Lab
+https://abdulrhaman-mohamed.github.io/ITI-3Months-Lab/MyIdeas/Hangman/index.html
 
 Draw
 -
